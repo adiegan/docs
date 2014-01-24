@@ -243,7 +243,7 @@ The following is an exhaustive list of the variables which can be requested
 through the API.
 
 Variable     | Description | Unit
-------------     | ------------------------|--
+-------------|-------------|------
 air_temp|Temperature | Fahrenheit 
 dew_point_temperature|Dew Point | Fahrenheit                      
 relative_humidity|Relative Humidity | %                      
