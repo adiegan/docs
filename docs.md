@@ -20,7 +20,7 @@ MesoWest API and its operational counterpart in development.
 Data available from the experimental MesoWest API are considered provisional. 
 As with other MesoWest web services, the data provided to MesoWest arise from cooperative 
 with many different educational institutions, public agencies and commercial firms. 
-See http://mesowest.utah.edu/html/help/main_index.html#usage for further details. 
+See <http://mesowest.utah.edu/html/help/main_index.html#usage> for further details. 
 
 
 
@@ -37,7 +37,7 @@ Production-grade services will be available soon from a collaborative project un
 Using the API requires a valid API key which is used to request a Token from the API. 
 That Token is then used as the authentication method to facilitate all other web service API requests. 
 A Token does not expire and can be used for any purpose in applications or server side scripting.
-Contact atmos-mesowest@lists.utah.edu to obtain an API key.
+Contact <atmos-mesowest@lists.utah.edu> to obtain an API key.
 
 ##Data Requests
 
@@ -56,7 +56,7 @@ for all stations. Capabilities are in place to provide additional metadata to us
 ##Interfacing with the API
 
 
-All API requests must be HTTP GET requests. The API can be found at http://api.mesowest.net/. This interface is exposed as web service only. All requests must be formed according to the below API guidelines. All requests are logged and excessive usage will be blocked when necessary to allow equal access to services for all users.
+All API requests must be HTTP GET requests. The API can be found at <http://api.mesowest.net/>. This interface is exposed as web service only. All requests must be formed according to the below API guidelines. All requests are logged and excessive usage will be blocked when necessary to allow equal access to services for all users.
 
 ##Making API Requests
 
@@ -74,22 +74,22 @@ Returns stations matching the query string parameters provided.
 
 List of query string parameters to request metadata.
 
-[NOAA]: http://www.nws.noaa.gov/organization.php
-[GACC]: http://gacc.nifc.gov/
+
+
 
 Query String | Description and Usage| Example
 ------------ | ---------------------|----------
    stid      |  String. Single or comma separated list of MesoWest station IDs. To find stations IDs, you can use other query parameters.| `&stid=wbb,kslc,fps`
  state       |   String. Single or comma separated list of abbreviated 2 character states (US and Canada Only).| `&state=ut,wy,dc`
-nwszone      |   String. Single or comma separated list of National Weather Service Zones. [NOAA] .| ` &nwszone=UT003,CA041`
-nwsfirezone  |   String. Single name of National Weather Service Fire Zones. [NOAA]. |`&nwsfirezone=LOX241`
-cwa          |   String. Single name of National Weather Service County Warning Area. [NOAA].| `&cwa=LOX`
-gacc         |   String. Single name of Geographic Area Coordination Center. [GACC].|` &gacc=EBCC`
-subgacc      |   String. Single name of Sub Geographic Area Coordination Center. [GACC].| ` &subgacc=EB07`
+nwszone      |   String. Single or comma separated list of National Weather Service Zones. <http://www.nws.noaa.gov/organization.php> .| ` &nwszone=UT003,CA041`
+nwsfirezone  |   String. Single name of National Weather Service Fire Zones. <http://www.nws.noaa.gov/organization.php>. |`&nwsfirezone=LOX241`
+cwa          |   String. Single name of National Weather Service County Warning Area. <http://www.nws.noaa.gov/organization.php>.| `&cwa=LOX`
+gacc         |   String. Single name of Geographic Area Coordination Center. <http://gacc.nifc.gov/>.|` &gacc=EBCC`
+subgacc      |   String. Single name of Sub Geographic Area Coordination Center. <http://gacc.nifc.gov/>.| ` &subgacc=EB07`
 county       |   String. Single name of state county. Use the &amp;state parameter to filter by state in the case of duplicate county names (such as King).| `&county=king&state=wa`
-vars         |   String. Single or comma separated list of sensor variables found here [reference]. The request will return all stations matching at least one of the variables provided. This is useful for filtering all stations that sense only certain variables, such as wind speed, or pressure.| `&vars=wind_speed,pressure`
+vars         |   String. Single or comma separated list of sensor variables found [here](#Sensor_Variable_List). The request will return all stations matching at least one of the variables provided. This is useful for filtering all stations that sense only certain variables, such as wind speed, or pressure.| `&vars=wind_speed,pressure`
 network      |   Number. Single network IDs. The ID can be found be using the /networks web service.| ` &network=153`
-radius       |   Number. A comma separated list of three values of the type [latitude,longitude,miles]. Coordinates are in decimal degrees. Returns all stations within radius of the point and miles provided.| `&radius=41.5,-120.25,20`
+radius       |   Number. A comma separated list of three values of the type \[latitude,longitude,miles\]. Coordinates are in decimal degrees. Returns all stations within radius of the point and miles provided.| `&radius=41.5,-120.25,20`
 bbox         |   Number. A bounding box defined by the lower left and upper right corners in decimal degrees latitude and longitude coordinates, in the form of \[lonmin,latmin,lonmax,latmax\].| `&bbox=-120,40,-119,41`
 nearstation  |   *Not implemented at this time.* |
 status       |   String. A value of either `active` or `inactive` returns only stations that are currently set as active in the archive. By default, omitting this parameter will return all stations.| ` &status=active`
@@ -161,18 +161,23 @@ Returns a list of the available variables within the system. No additional argum
 1.  query by states
 
     http://api.mesowest.net/stations?&state=dc,de&jsonformat=1&token=YourToken
+    
 2.  query by networks
 
     http://api.mesowest.net/stations?&network=150,170&jsonformat=1&token=YourToken
+    
 3.  query by county
 
     http://api.mesowest.net/stations?&county=Salt%20Lake,Summit&jsonformat=1&token=YourToken&complete=1
+    
 4.  query with a bounding box
 
     http://api.mesowest.net/stations?state=ut&status=active&bbox=-112,37.6,-111.8,40&jsonformat=2&token=YourToken
+    
 5.  query for a given radius
 
-    [http://api.mesowest.net/stations?state=ut&status=active&radius=40.75,-111.8833,10&jsonformat=2&token=YourToken]
+    http://api.mesowest.net/stations?state=ut&status=active&radius=40.75,-111.8833,10&jsonformat=2&token=YourToken
+    
 6.  query by gacc, subgacc
 
     http://api.mesowest.net/stations?state=ut&status=active&gacc=ebcc&subgacc=EB08&jsonformat=2&complete=1&token=YourToken
@@ -182,9 +187,11 @@ Returns a list of the available variables within the system. No additional argum
 1.  latestobs
 
     http://api.mesowest.net/stations?stid=wbb&jsonformat=2&latestobs=1&vars=air_temp,pressure&obtimezone=local&token=YourToken
+    
 2.  query for latest observation within 30 minutes
 
     http://api.mesowest.net/stations?state=dc&jsonformat=2&latestobs=1&within=30&vars=air_temp,pressure&obtimezone=local&token=YourToken
+    
 3.  query for data in a given time range:
 
     http://api.mesowest.net/stations?state=dc&jsonformat=2&start=201307010000&end=201307020000&vars=air_temp,pressure&obtimezone=local&token=YourToken
