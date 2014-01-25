@@ -146,6 +146,10 @@ Query String     | Description and Usage    | Example
 id|Number. Single or comma separated list of network ID types. | `&id=1,2,3,4`
 jsonformat|Number. A feature to return the JSON response back in human readable format. A value of 2 will indent nested objects by 2 tab widths. By default, omitting this field will return the JSON response back as a single line.  | ` &jsonformat=2`
 
+## /variables
+
+Returns a list of the available variables within the system. No additional arguments (besides `token`) are accepted.
+
 
 
 #Examples
