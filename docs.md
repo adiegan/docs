@@ -1,19 +1,26 @@
-#Introduction to Experimental MesoWest Streaming Services API
+#Introduction to MesoWest API Web Services
 
 ##Overview
 
-MesoWest is now providing experimental streaming services to
-publicly-accessible environmental data through the MesoWest API.
-Expanded, more robust, and operational streaming services will become
-available soon from a collaborative project involving the MesoWest
-team. Available now is access to millions of observations every day
+MesoWest is now providing experimental API web services to
+publicly-accessible weather data.
+Expanded, more robust, and operational API web services will become
+available during Spring 2014 arising from the University of Utah license of
+MesoWest software to a commercial firm. 
+
+API web services are intended for researchers and software developers needing access
+to large volumes of current or retrospective data. The University of Utah
+(<http://mesowest.utah.edu>MesoWest web site</a> provides access to weather information
+in graphical, tabular, and downloadable formats for individual needs.
+
+Available now from the experimental API is access to millions of observations every day
 retrieved from hundreds of sources. There is no charge for access to
 these observations in the public domain. Software developers can
 develop, test, and deploy applications using the experimental MesoWest
 API. We hope to foster the development of an expanding community of
 researchers and software developers interested in developing open
 source tools to access environmental data via the experimental
-MesoWest API and its operational counterpart in development.
+MesoWest API and its licensed operational counterpart.
 
 ##Data Usage Disclaimer
 
@@ -23,10 +30,9 @@ with many different educational institutions, public agencies and commercial fir
 See <http://mesowest.utah.edu/html/help/main_index.html#usage> for further details. 
 
 
-
 ##Service Disclaimer
 
-The MesoWest streaming services are considered experimental. 
+The MesoWest API web services are considered experimental. 
 We do not guarantee that this web service will be available 24/7. 
 During heavy usage, data delivery may be subject to some additional latency, but we are minimizing delays whenever possible. 
 We are testing notification of outages of the MesoWest API services to the registered API key owners depending on the nature of the issue. 
@@ -41,22 +47,21 @@ Contact <atmos-mesowest@lists.utah.edu> to obtain an API key.
 
 ##Data Requests
 
-This API provides streaming access to provisional observations as they are received from data providers.
+This API provides access to provisional observations as they are received from data providers.
 Access is available to millions of raw observations per day. 
 At this time, we do not provide climatological summaries such as minimum or maximum values within a time interval.
 
 ##Metadata Requests
 
 As our development of API services are funded in part by the National Mesonet Project of the National Weather Service, we are
-striving to obtain as much "metadata", data about the data, as possible. Basic metadata (station name, network data provider, latitude, longitude, elevation) are available
+striving to obtain as much "metadata" (data about the data) as possible. Basic metadata (station name, network data provider, latitude, longitude, elevation) are available
 for all stations. Capabilities are in place to provide additional metadata to users, but much of this information is incomplete at this time.
 
 #API Reference Documentation
 
 ##Interfacing with the API
 
-
-All API requests must be HTTP GET requests. The API can be found at <http://api.mesowest.net/>. This interface is exposed as web service only. All requests must be formed according to the below API guidelines. All requests are logged and excessive usage will be blocked when necessary to allow equal access to services for all users.
+All API requests must be HTTP GET requests. The API can be found at <http://api.mesowest.net/>. This interface is exposed as a web service only. All requests must be formed according to the API guidelines below. All requests are logged and excessive usage will be blocked when necessary to allow equal access to services for all Beta users.
 
 ##Making API Requests
 
