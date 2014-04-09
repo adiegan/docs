@@ -114,7 +114,7 @@ latestobs        | Number. Latest observations. Set this to `1` to request the l
 within           | Number. The number of minutes back from Now to return observations for stations when the latestobs parameter is used. A value of `15` means to return all observations within the past 15 minutes for the given stations. | `&latestobs=1&within=15`
 start            | Number. The start date and time in the form of `YYYYMMDDhhmm` to return observations, where `YYYY` is year, `MM` is month, `DD` is day, `hh` is hour, and `mm` is minutes. The start parameter must be used with the end parameter. All times are requested in UTC, but may be returned in either UTC or Local time format for each station. See the `obtimezone` parameter.  |` &start=201306011800 &end=201306021215`
 end              | Number. The end date and time in the form of `YYYYMMDDhhmm` to return observations, where `YYYY` is year, `MM` is month, `DD` is day, `hh` is hour, and `mm` is minutes. The start parameter must be used with the end parameter. All times are requested in UTC, but may be returned in either UTC or Local time format for each station. See the `obtimezone` parameter.  |` &start=201306011800 &end=201306021215`
-obtimezone       | String. A value of either `UTC` or `local`. If omitted the default is UTC.  |` &timezone=local`
+obtimezone       | String. A value of either `UTC` or `local`. If omitted the default is UTC.  |` &obtimezone=local`
 showemptystations| Number. Show stations even when there are no observations that match the time period. The JSON OBSERVATION object will be empty. A value of "1" is used to turn this one. By default, stations without observations are omitted from the response.  |`&showemptystations=1`
 
 
